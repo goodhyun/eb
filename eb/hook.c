@@ -31,7 +31,6 @@
 #include "error.h"
 #include "appendix.h"
 #include "text.h"
-#include "build-post.h"
 
 /*
  * Default hookset.

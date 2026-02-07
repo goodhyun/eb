@@ -30,7 +30,6 @@
 #include "eb.h"
 #include "error.h"
 #include "font.h"
-#include "build-post.h"
 
 /*
  * Initialize all fonts in the current subbook.

@@ -32,7 +32,6 @@
 #ifdef ENABLE_EBNET
 #include "ebnet.h"
 #endif
-#include "build-post.h"
 
 #if defined(DOS_FILE_PATH) && defined(HAVE_MBSTRING_H)
 /* a path may contain double-byte chars in SJIS. */

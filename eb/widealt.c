@@ -31,7 +31,6 @@
 #include "eb.h"
 #include "error.h"
 #include "appendix.h"
-#include "build-post.h"
 
 /*
  * Unexported functions.

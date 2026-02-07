@@ -33,7 +33,6 @@
 #ifdef ENABLE_EBNET
 #include "ebnet.h"
 #endif
-#include "build-post.h"
 
 /*
  * Appendix ID counter.

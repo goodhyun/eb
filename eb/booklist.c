@@ -32,7 +32,6 @@
 #ifdef ENABLE_EBNET
 #include "ebnet.h"
 #endif
-#include "build-post.h"
 
 /*
  * Initial value of `max_entry_count' in `EB_BookList'.
@@ -114,23 +113,23 @@ eb_bind_booklist(EB_BookList *booklist, const char *path)
     error_code = EB_ERR_EBNET_UNSUPPORTED;
     goto failed;
 #endif
-    if (!is_ebnet_url(path)) {
-	error_code = EB_ERR_BAD_FILE_NAME;
-	goto failed;
-    }
-    for (i = 0; i < booklist->entry_count; i++) {
-	free(booklist->entries[i].name);
-	free(booklist->entries[i].title);
-    }
-
-    error_code = ebnet_bind_booklist(booklist, path);
-    if (error_code != EB_SUCCESS)
-	goto failed;
-
-    LOG(("out: eb_bind_booklist(book=%d) = %s", (int)booklist->code,
-	eb_error_string(EB_SUCCESS)));
-    eb_unlock(&booklist->lock);
-    return EB_SUCCESS;
+//    if (!is_ebnet_url(path)) {
+//	error_code = EB_ERR_BAD_FILE_NAME;
+//	goto failed;
+//    }
+//    for (i = 0; i < booklist->entry_count; i++) {
+//	free(booklist->entries[i].name);
+//	free(booklist->entries[i].title);
+//    }
+//
+//    error_code = ebnet_bind_booklist(booklist, path);
+//    if (error_code != EB_SUCCESS)
+//	goto failed;
+//
+//    LOG(("out: eb_bind_booklist(book=%d) = %s", (int)booklist->code,
+//	eb_error_string(EB_SUCCESS)));
+//    eb_unlock(&booklist->lock);
+//    return EB_SUCCESS;
 
     /*
      * An error occurs...

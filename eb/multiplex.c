@@ -42,7 +42,6 @@
 
 #include "build-pre.h"
 #include "eb.h"
-#include "build-post.h"
 #include "dummyin6.h"
 
 #if !defined(HAVE_GETADDRINFO) || !defined(HAVE_GETNAMEINFO)

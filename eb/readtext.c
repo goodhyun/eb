@@ -30,7 +30,6 @@
 #include "eb.h"
 #include "error.h"
 #include "text.h"
-#include "build-post.h"
 
 /*
  * The maximum number of arguments for an escape sequence.

@@ -37,7 +37,6 @@
 
 #include "eb.h"
 #include "error.h"
-#include "build-post.h"
 #include "dummyin6.h"
 
 #if !defined(HAVE_GETADDRINFO) || !defined(HAVE_GETNAMEINFO)

@@ -26,6 +26,12 @@
  * SUCH DAMAGE.
  */
 
+/* Define EB_BUILD_LIBRARY to use local headers */
+#ifndef EB_BUILD_LIBRARY
+#define EB_BUILD_LIBRARY 1
+#endif
+
+
 #ifndef EB_ERROR_H
 #define EB_ERROR_H
 

@@ -12,7 +12,7 @@
  * 3. Neither the name of the project nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
  * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
@@ -29,22 +29,27 @@
 #ifndef EB_BUILD_PRE_H
 #define EB_BUILD_PRE_H
 
+/* Define EB_BUILD_LIBRARY to use local headers */
+#ifndef EB_BUILD_LIBRARY
+#define EB_BUILD_LIBRARY 1
+#endif
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
 
-#include <stdio.h>
-#include <errno.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <limits.h>
-#include <unistd.h>
 #include <dirent.h>
+#include <errno.h>
 #include <fcntl.h>
+#include <limits.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/stat.h>
 #include <sys/time.h>
+#include <sys/types.h>
+#include <unistd.h>
 
 #ifdef HAVE_DIRECT_H
 #include <direct.h>
@@ -75,10 +80,10 @@
  * stat() macros.
  */
 #ifndef S_ISREG
-#define S_ISREG(m)   (((m) & S_IFMT) == S_IFREG)
+#define S_ISREG(m) (((m) & S_IFMT) == S_IFREG)
 #endif
 #ifndef S_ISDIR
-#define S_ISDIR(m)   (((m) & S_IFMT) == S_IFDIR)
+#define S_ISDIR(m) (((m) & S_IFMT) == S_IFDIR)
 #endif
 
 /*
@@ -94,12 +99,11 @@
 #define ASCII_ISDIGIT(c) ('0' <= (c) && (c) <= '9')
 #define ASCII_ISUPPER(c) ('A' <= (c) && (c) <= 'Z')
 #define ASCII_ISLOWER(c) ('a' <= (c) && (c) <= 'z')
-#define ASCII_ISALPHA(c) \
- (ASCII_ISUPPER(c) || ASCII_ISLOWER(c))
-#define ASCII_ISALNUM(c) \
- (ASCII_ISUPPER(c) || ASCII_ISLOWER(c) || ASCII_ISDIGIT(c))
-#define ASCII_ISXDIGIT(c) \
- (ASCII_ISDIGIT(c) || ('A' <= (c) && (c) <= 'F') || ('a' <= (c) && (c) <= 'f'))
+#define ASCII_ISALPHA(c) (ASCII_ISUPPER(c) || ASCII_ISLOWER(c))
+#define ASCII_ISALNUM(c)                                                       \
+  (ASCII_ISUPPER(c) || ASCII_ISLOWER(c) || ASCII_ISDIGIT(c))
+#define ASCII_ISXDIGIT(c)                                                      \
+  (ASCII_ISDIGIT(c) || ('A' <= (c) && (c) <= 'F') || ('a' <= (c) && (c) <= 'f'))
 #define ASCII_TOUPPER(c) (('a' <= (c) && (c) <= 'z') ? (c) - 0x20 : (c))
 #define ASCII_TOLOWER(c) (('A' <= (c) && (c) <= 'Z') ? (c) + 0x20 : (c))
 

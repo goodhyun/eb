@@ -29,7 +29,6 @@
 #include "build-pre.h"
 #include "eb.h"
 #include "error.h"
-#include "build-post.h"
 
 /*
  * Get information about the current subbook.

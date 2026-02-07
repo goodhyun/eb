@@ -28,7 +28,6 @@
 
 #include "build-pre.h"
 #include "eb.h"
-#include "build-post.h"
 
 /*
  * Compare `word' and `pattern'.

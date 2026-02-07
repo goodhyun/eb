@@ -30,7 +30,6 @@
 #include "eb.h"
 #include "error.h"
 #include "binary.h"
-#include "build-post.h"
 
 /*
  * Unexported function.

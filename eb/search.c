@@ -30,7 +30,6 @@
 #include "eb.h"
 #include "error.h"
 #include "text.h"
-#include "build-post.h"
 
 /*
  * Page-ID macros.

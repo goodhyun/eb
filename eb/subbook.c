@@ -31,7 +31,6 @@
 #include "error.h"
 #include "binary.h"
 #include "font.h"
-#include "build-post.h"
 
 /*
  * Unexported functions.

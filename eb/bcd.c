@@ -29,7 +29,6 @@
 #include "build-pre.h"
 #include "eb.h"
 #include "error.h"
-#include "build-post.h"
 
 /*
  * Get a BCD (binary coded decimal) packed integer with 2 bytes
